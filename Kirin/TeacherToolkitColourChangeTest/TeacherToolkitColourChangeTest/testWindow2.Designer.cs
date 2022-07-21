@@ -56,6 +56,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Test button";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ColourTimer
             // 
@@ -66,7 +67,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(398, 199);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(121, 104);
             this.button2.TabIndex = 2;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -75,7 +76,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(231, 325);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(129, 74);
             this.button3.TabIndex = 3;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
