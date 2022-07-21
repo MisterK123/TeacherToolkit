@@ -1,0 +1,10 @@
+C:\Users\18ositisa\Source\Repos\timerFormMain\timerFormMain\bin\Debug\timerFormMain.exe.config
+C:\Users\18ositisa\Source\Repos\timerFormMain\timerFormMain\bin\Debug\timerFormMain.exe
+C:\Users\18ositisa\Source\Repos\timerFormMain\timerFormMain\bin\Debug\timerFormMain.pdb
+C:\Users\18ositisa\Source\Repos\timerFormMain\timerFormMain\obj\Debug\timerFormMain.csprojAssemblyReference.cache
+C:\Users\18ositisa\Source\Repos\timerFormMain\timerFormMain\obj\Debug\timerFormMain.Form1.resources
+C:\Users\18ositisa\Source\Repos\timerFormMain\timerFormMain\obj\Debug\timerFormMain.Properties.Resources.resources
+C:\Users\18ositisa\Source\Repos\timerFormMain\timerFormMain\obj\Debug\timerFormMain.csproj.GenerateResource.cache
+C:\Users\18ositisa\Source\Repos\timerFormMain\timerFormMain\obj\Debug\timerFormMain.csproj.CoreCompileInputs.cache
+C:\Users\18ositisa\Source\Repos\timerFormMain\timerFormMain\obj\Debug\timerFormMain.exe
+C:\Users\18ositisa\Source\Repos\timerFormMain\timerFormMain\obj\Debug\timerFormMain.pdb

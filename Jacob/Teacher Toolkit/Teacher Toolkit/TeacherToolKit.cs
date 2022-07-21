@@ -18,6 +18,18 @@ namespace Teacher_Toolkit
     {
         Random rnd = new Random();
 
+
+
+        static public List<string> currentColourScheme = new List<string>();
+        static public int theme;
+        int currentTheme = 10;
+
+        List<string> OtherPannelColour = new List<string>() { "FFCB70", "F7B064", "BBBBBB", "CCCCCC", "DDDDDD" };
+        List<string> pannelColour = new List<string>() { "3B2F4C", "31909B", "BBBBBB", "CCCCCC", "DDDDDD" }; 
+        List<string> backgroundColour = new List<string>() { "3B2F4C", "31909B", "BBBBBB", "CCCCCC", "DDDDDD" };
+        List<string> buttonBackground = new List<string>() { "4F3E65", "3BADBA", "BBBBBB", "CCCCCC", "DDDDDD" };
+        List<string> fontColour = new List<string>() { "FFCB70", "F7B064", "BBBBBB", "CCCCCC", "DDDDDD" };
+
         //declare here
         public TeacherToolkit()
         {
@@ -29,7 +41,7 @@ namespace Teacher_Toolkit
             //init here! 
 
             g = WhiteBoardPanel.CreateGraphics();
-            p.SetLineCap(System.Drawing.Drawing2D.LineCap.Round, System.Drawing.Drawing2D.LineCap.Round, System.Drawing.Drawing2D.DashCap.Round);
+            p.SetLineCap(LineCap.Round, LineCap.Round, DashCap.Round);
         }
         public void Form1_Load(object sender, EventArgs e)
         {
@@ -903,6 +915,27 @@ namespace Teacher_Toolkit
 
         }
 
+        public void changeColours()
+        {
+            Console.WriteLine("called");
+            Console.WriteLine(TeacherToolkit.currentColourScheme[2].Substring(0, 2), 16);
+            foreach (Control cont in Controls) if (cont.GetType() == typeof(Button)) { cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[2].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[2].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[2].Substring(4, 2), 16)); }
+            foreach (Control cont in Controls) if (cont.GetType() == typeof(Button)) { cont.ForeColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(4, 2), 16)); }
+            foreach (Control cont in Controls) if (cont.GetType() == typeof(Label)) { cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(4, 2), 16)); }
+            foreach (Control cont in Controls) if (cont.GetType() == typeof(Label)) { cont.ForeColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(4, 2), 16)); }
+            foreach (Control cont in Controls) if (cont.GetType() == typeof(Panel)) { if (cont.Name == "ClockPanel" || cont.Name == "Navigation") { cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[4].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[4].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[4].Substring(4, 2), 16)); } } else cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[0].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[0].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[0].Substring(4, 2), 16));
+            this.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(4, 2), 16));
+            foreach(var panel in this.Controls.OfType<Panel>())
+            {
+                foreach (Control cont in Controls) if (cont.GetType() == typeof(Button)) { cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[2].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[2].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[2].Substring(4, 2), 16)); }
+                foreach (Control cont in Controls) if (cont.GetType() == typeof(Button)) { cont.ForeColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(4, 2), 16)); }
+                foreach (Control cont in Controls) if (cont.GetType() == typeof(Label)) { cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(4, 2), 16)); }
+                foreach (Control cont in Controls) if (cont.GetType() == typeof(Label)) { cont.ForeColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(4, 2), 16)); }
+                foreach (Control cont in Controls) if (cont.GetType() == typeof(Panel)) { cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[0].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[0].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[0].Substring(4, 2), 16)); }
+                foreach (Control cont in Controls) if (cont.GetType() == typeof(Panel)) { if (cont.Name == "ClockPanel" || cont.Name == "Navigation") { cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[4].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[4].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[4].Substring(4, 2), 16)); } } else cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[0].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[0].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[0].Substring(4, 2), 16));
+            }
+        }
+
         public static bool TimersPanelShow = true;
         Timers timers;
         private void TimersPopOutButton_Click(object sender, EventArgs e)
@@ -923,6 +956,105 @@ namespace Teacher_Toolkit
                     TimersPanel.Show();
                 }
                 catch { }
+            }
+        }
+
+        private void SettingsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                theme = 0;
+                currentColourScheme.Clear();
+            }
+
+            if (comboBox1.SelectedIndex == 1)
+            {
+                theme = 1;
+                currentColourScheme.Clear();
+            }
+
+            if (comboBox1.SelectedIndex == 2)
+            {
+                theme = 2;
+                currentColourScheme.Clear();
+            }
+
+            if (comboBox1.SelectedIndex == 3)
+            {
+                theme = 3;
+                currentColourScheme.Clear();
+            }
+
+            if (comboBox1.SelectedIndex == 4)
+            {
+                theme = 4;
+                currentColourScheme.Clear();
+            }
+
+            currentColourScheme.Add(pannelColour[theme]);
+            currentColourScheme.Add(fontColour[theme]);
+            currentColourScheme.Add(buttonBackground[theme]);
+            currentColourScheme.Add(backgroundColour[theme]);
+            currentColourScheme.Add(OtherPannelColour[theme]);
+
+            colourChangeTImer.Enabled = true;
+        }
+
+        private void colourChangeTImer_Tick(object sender, EventArgs e)
+        {
+            if (TeacherToolkit.theme == 0)
+            {
+                if(currentTheme != TeacherToolkit.theme)
+                {
+                    currentTheme = TeacherToolkit.theme;
+                    Console.WriteLine("Theme 1 selected");
+                    changeColours();
+                }
+                
+            }
+            if (TeacherToolkit.theme == 1)
+            {
+                if (currentTheme != TeacherToolkit.theme)
+                {
+                    currentTheme = TeacherToolkit.theme;
+                    Console.WriteLine("Theme 2 selected");
+                    changeColours();
+                }
+                
+            }
+            if (TeacherToolkit.theme == 2)
+            {
+                if (currentTheme != TeacherToolkit.theme)
+                {
+                    currentTheme = TeacherToolkit.theme;
+                    Console.WriteLine("Theme 3 selected");
+                    changeColours();
+                }
+                
+            }
+            if (TeacherToolkit.theme == 3)
+            {
+                if (currentTheme != TeacherToolkit.theme)
+                {
+                    currentTheme = TeacherToolkit.theme;
+                    Console.WriteLine("Theme 4 selected");
+                    changeColours();
+                }
+                
+            }
+            if (TeacherToolkit.theme == 4)
+            {
+                if (currentTheme != TeacherToolkit.theme)
+                {
+                    currentTheme = TeacherToolkit.theme;
+                    Console.WriteLine("Theme 5 selected");
+                    changeColours();
+                }
             }
         }
     }

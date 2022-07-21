@@ -84,6 +84,7 @@ namespace Teacher_Toolkit
             this.CountdownTimer = new System.Windows.Forms.Timer(this.components);
             this.StopwatchTimer = new System.Windows.Forms.Timer(this.components);
             this.RandomNumberGeneratorPanel = new System.Windows.Forms.Panel();
+            this.RandomNumberGeneratorPopOutButton = new System.Windows.Forms.Button();
             this.DiceLabel = new System.Windows.Forms.Label();
             this.RandomTwenty = new System.Windows.Forms.Button();
             this.RandomTwelve = new System.Windows.Forms.Button();
@@ -154,6 +155,9 @@ namespace Teacher_Toolkit
             this.StartTime = new System.Windows.Forms.TextBox();
             this.ExamBoard = new System.Windows.Forms.TextBox();
             this.CheckPop = new System.Windows.Forms.Timer(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.colourChangeTImer = new System.Windows.Forms.Timer(this.components);
             this.Navigation.SuspendLayout();
             this.ClockPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
@@ -188,7 +192,7 @@ namespace Teacher_Toolkit
             this.Navigation.Dock = System.Windows.Forms.DockStyle.Left;
             this.Navigation.Location = new System.Drawing.Point(0, 0);
             this.Navigation.Name = "Navigation";
-            this.Navigation.Size = new System.Drawing.Size(186, 577);
+            this.Navigation.Size = new System.Drawing.Size(186, 654);
             this.Navigation.TabIndex = 0;
             // 
             // ExamTimerButton
@@ -245,7 +249,7 @@ namespace Teacher_Toolkit
             this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SettingsButton.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsButton.ForeColor = System.Drawing.Color.White;
-            this.SettingsButton.Location = new System.Drawing.Point(0, 535);
+            this.SettingsButton.Location = new System.Drawing.Point(0, 612);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Size = new System.Drawing.Size(186, 42);
             this.SettingsButton.TabIndex = 5;
@@ -922,6 +926,7 @@ namespace Teacher_Toolkit
             // 
             // RandomNumberGeneratorPanel
             // 
+            this.RandomNumberGeneratorPanel.Controls.Add(this.RandomNumberGeneratorPopOutButton);
             this.RandomNumberGeneratorPanel.Controls.Add(this.DiceLabel);
             this.RandomNumberGeneratorPanel.Controls.Add(this.RandomTwenty);
             this.RandomNumberGeneratorPanel.Controls.Add(this.RandomTwelve);
@@ -936,10 +941,26 @@ namespace Teacher_Toolkit
             this.RandomNumberGeneratorPanel.Controls.Add(this.MaximumLabel);
             this.RandomNumberGeneratorPanel.Controls.Add(this.UpperLimitBox);
             this.RandomNumberGeneratorPanel.Controls.Add(this.RandomNumberGeneratorTitle);
-            this.RandomNumberGeneratorPanel.Location = new System.Drawing.Point(1091, 440);
+            this.RandomNumberGeneratorPanel.Location = new System.Drawing.Point(1133, 417);
             this.RandomNumberGeneratorPanel.Name = "RandomNumberGeneratorPanel";
             this.RandomNumberGeneratorPanel.Size = new System.Drawing.Size(763, 552);
             this.RandomNumberGeneratorPanel.TabIndex = 5;
+            // 
+            // RandomNumberGeneratorPopOutButton
+            // 
+            this.RandomNumberGeneratorPopOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.RandomNumberGeneratorPopOutButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.RandomNumberGeneratorPopOutButton.FlatAppearance.BorderSize = 0;
+            this.RandomNumberGeneratorPopOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RandomNumberGeneratorPopOutButton.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RandomNumberGeneratorPopOutButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.RandomNumberGeneratorPopOutButton.Location = new System.Drawing.Point(622, 28);
+            this.RandomNumberGeneratorPopOutButton.Name = "RandomNumberGeneratorPopOutButton";
+            this.RandomNumberGeneratorPopOutButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.RandomNumberGeneratorPopOutButton.Size = new System.Drawing.Size(90, 42);
+            this.RandomNumberGeneratorPopOutButton.TabIndex = 35;
+            this.RandomNumberGeneratorPopOutButton.Text = "Pop";
+            this.RandomNumberGeneratorPopOutButton.UseVisualStyleBackColor = false;
             // 
             // DiceLabel
             // 
@@ -1282,15 +1303,18 @@ namespace Teacher_Toolkit
             // 
             // SettingsPanel
             // 
+            this.SettingsPanel.Controls.Add(this.label2);
+            this.SettingsPanel.Controls.Add(this.comboBox1);
             this.SettingsPanel.Controls.Add(this.label1);
             this.SettingsPanel.Controls.Add(this.SendFeedbackButton);
             this.SettingsPanel.Controls.Add(this.FeedbackInputBox);
             this.SettingsPanel.Controls.Add(this.FeedbackTitle);
             this.SettingsPanel.Controls.Add(this.SettingsTitle);
-            this.SettingsPanel.Location = new System.Drawing.Point(1139, 401);
+            this.SettingsPanel.Location = new System.Drawing.Point(188, 29);
             this.SettingsPanel.Name = "SettingsPanel";
             this.SettingsPanel.Size = new System.Drawing.Size(763, 552);
             this.SettingsPanel.TabIndex = 40;
+            this.SettingsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SettingsPanel_Paint);
             // 
             // label1
             // 
@@ -1816,19 +1840,49 @@ namespace Teacher_Toolkit
             this.CheckPop.Enabled = true;
             this.CheckPop.Tick += new System.EventHandler(this.CheckPop_Tick);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Colour Scheme 1",
+            "Colour Scheme 2",
+            "Colour Scheme 3",
+            "Colour Scheme 4",
+            "Colour Scheme 5"});
+            this.comboBox1.Location = new System.Drawing.Point(31, 254);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 33;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(24, 191);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(273, 42);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Colour Themes";
+            // 
+            // colourChangeTImer
+            // 
+            this.colourChangeTImer.Tick += new System.EventHandler(this.colourChangeTImer_Tick);
+            // 
             // TeacherToolkit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.ClientSize = new System.Drawing.Size(1275, 577);
+            this.ClientSize = new System.Drawing.Size(1486, 654);
             this.Controls.Add(this.SeatingPlanGeneratorPanel);
             this.Controls.Add(this.ExamTimerPanel);
             this.Controls.Add(this.WhiteBoardContainerPanel);
             this.Controls.Add(this.RewardPointsPanel);
+            this.Controls.Add(this.RandomNumberGeneratorPanel);
             this.Controls.Add(this.RewardsPointHelpPanel);
             this.Controls.Add(this.SettingsPanel);
-            this.Controls.Add(this.RandomNumberGeneratorPanel);
             this.Controls.Add(this.LightDarkModeToggleButton);
             this.Controls.Add(this.RandomStudentPanel);
             this.Controls.Add(this.TimersPanel);
@@ -1999,6 +2053,10 @@ namespace Teacher_Toolkit
         private System.Windows.Forms.Button TimersPopOutButton;
         private System.Windows.Forms.Button MuteTimerSoundButton;
         private System.Windows.Forms.Timer CheckPop;
+        private System.Windows.Forms.Button RandomNumberGeneratorPopOutButton;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Timer colourChangeTImer;
     }
 }
 
