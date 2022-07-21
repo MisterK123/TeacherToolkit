@@ -1,0 +1,10 @@
+C:\Users\18ositisa\Source\Repos\randomStudentFormMain\randomStudentFormMain\bin\Debug\randomStudentFormMain.exe.config
+C:\Users\18ositisa\Source\Repos\randomStudentFormMain\randomStudentFormMain\bin\Debug\randomStudentFormMain.exe
+C:\Users\18ositisa\Source\Repos\randomStudentFormMain\randomStudentFormMain\bin\Debug\randomStudentFormMain.pdb
+C:\Users\18ositisa\Source\Repos\randomStudentFormMain\randomStudentFormMain\obj\Debug\randomStudentFormMain.csprojAssemblyReference.cache
+C:\Users\18ositisa\Source\Repos\randomStudentFormMain\randomStudentFormMain\obj\Debug\randomStudentFormMain.Form1.resources
+C:\Users\18ositisa\Source\Repos\randomStudentFormMain\randomStudentFormMain\obj\Debug\randomStudentFormMain.Properties.Resources.resources
+C:\Users\18ositisa\Source\Repos\randomStudentFormMain\randomStudentFormMain\obj\Debug\randomStudentFormMain.csproj.GenerateResource.cache
+C:\Users\18ositisa\Source\Repos\randomStudentFormMain\randomStudentFormMain\obj\Debug\randomStudentFormMain.csproj.CoreCompileInputs.cache
+C:\Users\18ositisa\Source\Repos\randomStudentFormMain\randomStudentFormMain\obj\Debug\randomStudentFormMain.exe
+C:\Users\18ositisa\Source\Repos\randomStudentFormMain\randomStudentFormMain\obj\Debug\randomStudentFormMain.pdb
