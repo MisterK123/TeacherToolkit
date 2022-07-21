@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.ColourTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -50,6 +52,11 @@
             this.button1.Text = "Test button";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // ColourTimer
+            // 
+            this.ColourTimer.Enabled = true;
+            this.ColourTimer.Tick += new System.EventHandler(this.ColourTimer_Tick);
+            // 
             // testWindow1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -59,6 +66,7 @@
             this.Controls.Add(this.label1);
             this.Name = "testWindow1";
             this.Text = "testWindow1";
+            this.Load += new System.EventHandler(this.testWindow1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -68,5 +76,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer ColourTimer;
     }
 }

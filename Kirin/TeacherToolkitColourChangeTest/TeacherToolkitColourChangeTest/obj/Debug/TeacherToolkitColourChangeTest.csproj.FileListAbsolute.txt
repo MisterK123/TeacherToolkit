@@ -8,3 +8,5 @@ C:\Users\18harringtonk\Source\Repos\TeacherToolkit\Kirin\TeacherToolkitColourCha
 C:\Users\18harringtonk\Source\Repos\TeacherToolkit\Kirin\TeacherToolkitColourChangeTest\TeacherToolkitColourChangeTest\obj\Debug\TeacherToolkitColourChangeTest.csproj.CoreCompileInputs.cache
 C:\Users\18harringtonk\Source\Repos\TeacherToolkit\Kirin\TeacherToolkitColourChangeTest\TeacherToolkitColourChangeTest\obj\Debug\TeacherToolkitColourChangeTest.exe
 C:\Users\18harringtonk\Source\Repos\TeacherToolkit\Kirin\TeacherToolkitColourChangeTest\TeacherToolkitColourChangeTest\obj\Debug\TeacherToolkitColourChangeTest.pdb
+C:\Users\18harringtonk\Source\Repos\TeacherToolkit\Kirin\TeacherToolkitColourChangeTest\TeacherToolkitColourChangeTest\obj\Debug\TeacherToolkitColourChangeTest.testWindow1.resources
+C:\Users\18harringtonk\Source\Repos\TeacherToolkit\Kirin\TeacherToolkitColourChangeTest\TeacherToolkitColourChangeTest\obj\Debug\TeacherToolkitColourChangeTest.testWindow2.resources
