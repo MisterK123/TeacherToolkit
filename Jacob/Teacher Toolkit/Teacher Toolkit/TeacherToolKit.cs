@@ -915,25 +915,75 @@ namespace Teacher_Toolkit
 
         }
 
+        int r;
+        int g;
+        int b;
+        int schemeInd;
+        bool isBorL = false; // button or label
+
         public void changeColours()
         {
             Console.WriteLine("called");
-            Console.WriteLine(TeacherToolkit.currentColourScheme[2].Substring(0, 2), 16);
-            foreach (Control cont in Controls) if (cont.GetType() == typeof(Button)) { cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[2].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[2].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[2].Substring(4, 2), 16)); }
-            foreach (Control cont in Controls) if (cont.GetType() == typeof(Button)) { cont.ForeColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(4, 2), 16)); }
-            foreach (Control cont in Controls) if (cont.GetType() == typeof(Label)) { cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(4, 2), 16)); }
-            foreach (Control cont in Controls) if (cont.GetType() == typeof(Label)) { cont.ForeColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(4, 2), 16)); }
-            foreach (Control cont in Controls) if (cont.GetType() == typeof(Panel)) { if (cont.Name == "ClockPanel" || cont.Name == "Navigation") { cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[4].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[4].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[4].Substring(4, 2), 16)); } } else cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[0].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[0].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[0].Substring(4, 2), 16));
+            foreach (Control cont in Controls)
+            { 
+                isBorL = false;
+                if (cont.GetType() == typeof(Button)) 
+                {
+                    schemeInd = 2;
+                    isBorL = true;
+                }
+                else if (cont.GetType() == typeof(Label))
+                {
+                    schemeInd = 3;
+                    isBorL = true;
+                }
+                
+                if (isBorL)
+                {
+                    r = Convert.ToInt32(TeacherToolkit.currentColourScheme[schemeInd].Substring(0, 2), 16);
+                    g = Convert.ToInt32(TeacherToolkit.currentColourScheme[schemeInd].Substring(2, 2), 16);
+                    b = Convert.ToInt32(TeacherToolkit.currentColourScheme[schemeInd].Substring(4, 2), 16);
+                    cont.BackColor = Color.FromArgb(r, g, b)
+                    r = Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(0, 2), 16);
+                    g = Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(2, 2), 16);
+                    b = Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(4, 2), 16);
+                    cont.ForeColor = Color.FromArgb(r, g, b)
+                }
+                
+                else if (cont.GetType() == typeof(Panel)
+                {
+                    if (cont.Name == "ClockPanel" || cont.Name = "Navigation")
+                    {
+                        schemeInd = 4;
+                    }
+                    else
+                    {
+                        schemeInd = 0;
+                    }
+                    r = Convert.ToInt32(TeacherToolkit.currentColourScheme[schemeInd].Substring(0, 2), 16);
+                    g = Convert.ToInt32(TeacherToolkit.currentColourScheme[schemeInd].Substring(2, 2), 16);
+                    b = Convert.ToInt32(TeacherToolkit.currentColourScheme[schemeInd].Substring(4, 2), 16);
+                    cont.BackColor = Color.FromArgb(r, g, b);
+                }
+            }
+            
             this.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(4, 2), 16));
-            foreach(var panel in this.Controls.OfType<Panel>())
-            {
-                foreach (Control cont in Controls) if (cont.GetType() == typeof(Button)) { cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[2].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[2].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[2].Substring(4, 2), 16)); }
+            /* I STARTED TO EDIT THIS BUT I REALISED IT ONLY DOES THE SAME AS ABOVE ^^
+            //foreach(var panel in this.Controls.OfType<Panel>()) //No idea what this was meant to do, add it back in if it had some functionality I missed -Ja
+            //{
+                foreach (Control cont in Controls)
+                { 
+                    if (cont.GetType() == typeof(Button))
+                    { 
+                        cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[2].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[2].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[2].Substring(4, 2), 16)); 
+                    }
+                }
                 foreach (Control cont in Controls) if (cont.GetType() == typeof(Button)) { cont.ForeColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(4, 2), 16)); }
                 foreach (Control cont in Controls) if (cont.GetType() == typeof(Label)) { cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(4, 2), 16)); }
                 foreach (Control cont in Controls) if (cont.GetType() == typeof(Label)) { cont.ForeColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[1].Substring(4, 2), 16)); }
-                foreach (Control cont in Controls) if (cont.GetType() == typeof(Panel)) { cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[0].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[0].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[0].Substring(4, 2), 16)); }
                 foreach (Control cont in Controls) if (cont.GetType() == typeof(Panel)) { if (cont.Name == "ClockPanel" || cont.Name == "Navigation") { cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[4].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[4].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[4].Substring(4, 2), 16)); } } else cont.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[0].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[0].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[0].Substring(4, 2), 16));
-            }
+            /}
+            */
         }
 
         public static bool TimersPanelShow = true;
