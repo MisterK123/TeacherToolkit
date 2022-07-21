@@ -23,10 +23,14 @@ namespace TeacherToolkitColourChangeTest
         static public List<string> currentColourScheme = new List<string>();
 
 
+        List<string> buttonBackground = new List<string>() { "4F3E65", "3BADBA", "BBBBBB", "CCCCCC", "DDDDDD" };
+        List<string> fontColour = new List<string>() { "FFCB70", "F7B064", "BBBBBB", "CCCCCC", "DDDDDD" };
+        List<string> backgroundColour = new List<string>() { "3B2F4C", "31909B", "BBBBBB", "CCCCCC", "DDDDDD" };
+        List<string> OtherPannelColour = new List<string>() { "FFCB70", "F7B064", "BBBBBB", "CCCCCC", "DDDDDD" };
         List<string> pannelColour = new List<string>() { "FFCB70", "F7B064", "BBBBBB", "CCCCCC", "DDDDDD"}; 
-        List<string> backgroundColour = new List<string>() { "3B2F4C", "31909B", "BBBBBB", "CCCCCC", "DDDDDD" }; 
-        List<string> buttonBackground = new List<string>() { "4F3E65", "3BADBA", "BBBBBB", "CCCCCC", "DDDDDD" }; 
-        List<string> fontColour = new List<string>() { "FFCB70", "F7B064", "BBBBBB", "CCCCCC", "DDDDDD" }; 
+        
+        
+         
 
 
 
@@ -80,7 +84,7 @@ namespace TeacherToolkitColourChangeTest
             currentColourScheme.Add(fontColour[theme]);
             currentColourScheme.Add(buttonBackground[theme]);
             currentColourScheme.Add(backgroundColour[theme]);
-
+            currentColourScheme.Add(OtherPannelColour[theme]);
         }
 
         private void Form1_Load(object sender, EventArgs e)

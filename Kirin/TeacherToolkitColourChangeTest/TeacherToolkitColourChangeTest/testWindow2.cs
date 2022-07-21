@@ -80,17 +80,30 @@ namespace TeacherToolkitColourChangeTest
         public void changeColours()
         {
             Console.WriteLine("called");
-            Console.WriteLine(Form1.currentColourScheme[2].Substring(0, 2), 16);
             foreach (Control cont in Controls) if (cont.GetType() == typeof(Button)) { cont.BackColor = Color.FromArgb(Convert.ToInt32(Form1.currentColourScheme[2].Substring(0, 2), 16), Convert.ToInt32(Form1.currentColourScheme[2].Substring(2, 2), 16), Convert.ToInt32(Form1.currentColourScheme[2].Substring(4, 2), 16)); }
             foreach(Control cont in Controls) if (cont.GetType() == typeof(Button)) { cont.ForeColor = Color.FromArgb(Convert.ToInt32(Form1.currentColourScheme[1].Substring(0, 2), 16), Convert.ToInt32(Form1.currentColourScheme[1].Substring(2, 2), 16), Convert.ToInt32(Form1.currentColourScheme[1].Substring(4, 2), 16)); }
             foreach(Control cont in Controls) if (cont.GetType() == typeof(Label)) { cont.BackColor = Color.FromArgb(Convert.ToInt32(Form1.currentColourScheme[3].Substring(0, 2), 16), Convert.ToInt32(Form1.currentColourScheme[3].Substring(2, 2), 16), Convert.ToInt32(Form1.currentColourScheme[3].Substring(4, 2), 16)); }
             foreach (Control cont in Controls) if (cont.GetType() == typeof(Label)) { cont.ForeColor = Color.FromArgb(Convert.ToInt32(Form1.currentColourScheme[1].Substring(0, 2), 16), Convert.ToInt32(Form1.currentColourScheme[1].Substring(2, 2), 16), Convert.ToInt32(Form1.currentColourScheme[1].Substring(4, 2), 16)); }
-            foreach (Control cont in Controls) if (cont.GetType() == typeof(Panel)) { cont.BackColor = Color.FromArgb(Convert.ToInt32(Form1.currentColourScheme[0].Substring(0, 2), 16), Convert.ToInt32(Form1.currentColourScheme[0].Substring(2, 2), 16), Convert.ToInt32(Form1.currentColourScheme[0].Substring(4, 2), 16)); }
             this.BackColor = Color.FromArgb(Convert.ToInt32(Form1.currentColourScheme[3].Substring(0, 2), 16), Convert.ToInt32(Form1.currentColourScheme[3].Substring(2, 2), 16), Convert.ToInt32(Form1.currentColourScheme[3].Substring(4, 2), 16));
-            
+            foreach (Control cont in Controls) if (cont.GetType() == typeof(Panel)) { if (cont.Name == "ClockPanel" || cont.Name == "Navigation") { cont.BackColor = Color.FromArgb(Convert.ToInt32(Form1.currentColourScheme[4].Substring(0, 2), 16), Convert.ToInt32(Form1.currentColourScheme[4].Substring(2, 2), 16), Convert.ToInt32(Form1.currentColourScheme[4].Substring(4, 2), 16)); } } else cont.BackColor = Color.FromArgb(Convert.ToInt32(Form1.currentColourScheme[0].Substring(0, 2), 16), Convert.ToInt32(Form1.currentColourScheme[0].Substring(2, 2), 16), Convert.ToInt32(Form1.currentColourScheme[0].Substring(4, 2), 16));
+            foreach (var panel in this.Controls.OfType<Panel>())
+            {
+                Console.WriteLine("called again");
+                foreach (Control cont in Controls) if (cont.GetType() == typeof(Button)) { cont.BackColor = Color.FromArgb(Convert.ToInt32(Form1.currentColourScheme[2].Substring(0, 2), 16), Convert.ToInt32(Form1.currentColourScheme[2].Substring(2, 2), 16), Convert.ToInt32(Form1.currentColourScheme[2].Substring(4, 2), 16)); }
+                foreach (Control cont in Controls) if (cont.GetType() == typeof(Button)) { cont.ForeColor = Color.FromArgb(Convert.ToInt32(Form1.currentColourScheme[1].Substring(0, 2), 16), Convert.ToInt32(Form1.currentColourScheme[1].Substring(2, 2), 16), Convert.ToInt32(Form1.currentColourScheme[1].Substring(4, 2), 16)); }
+                foreach (Control cont in Controls) if (cont.GetType() == typeof(Label)) { cont.BackColor = Color.FromArgb(Convert.ToInt32(Form1.currentColourScheme[3].Substring(0, 2), 16), Convert.ToInt32(Form1.currentColourScheme[3].Substring(2, 2), 16), Convert.ToInt32(Form1.currentColourScheme[3].Substring(4, 2), 16)); }
+                foreach (Control cont in Controls) if (cont.GetType() == typeof(Label)) { cont.ForeColor = Color.FromArgb(Convert.ToInt32(Form1.currentColourScheme[1].Substring(0, 2), 16), Convert.ToInt32(Form1.currentColourScheme[1].Substring(2, 2), 16), Convert.ToInt32(Form1.currentColourScheme[1].Substring(4, 2), 16)); }
+                foreach (Control cont in Controls) if (cont.GetType() == typeof(Panel)) { cont.BackColor = Color.FromArgb(Convert.ToInt32(Form1.currentColourScheme[0].Substring(0, 2), 16), Convert.ToInt32(Form1.currentColourScheme[0].Substring(2, 2), 16), Convert.ToInt32(Form1.currentColourScheme[0].Substring(4, 2), 16)); }
+                foreach (Control cont in Controls) if (cont.GetType() == typeof(Panel)) { if (cont.Name == "ClockPanel" || cont.Name == "Navigation") { cont.BackColor = Color.FromArgb(Convert.ToInt32(Form1.currentColourScheme[4].Substring(0, 2), 16), Convert.ToInt32(Form1.currentColourScheme[4].Substring(2, 2), 16), Convert.ToInt32(Form1.currentColourScheme[4].Substring(4, 2), 16)); } } else cont.BackColor = Color.FromArgb(Convert.ToInt32(Form1.currentColourScheme[0].Substring(0, 2), 16), Convert.ToInt32(Form1.currentColourScheme[0].Substring(2, 2), 16), Convert.ToInt32(Form1.currentColourScheme[0].Substring(4, 2), 16));
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
