@@ -16,5 +16,17 @@ namespace TeacherToolkitColourChangeTest
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            testWindow1 win1 = new testWindow1();
+            win1.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            testWindow2 win2 = new testWindow2();
+            win2.Show();
+        }
     }
 }
