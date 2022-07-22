@@ -1,0 +1,10 @@
+G:\Adrian Y10\RandomNumber\RandomNumber\obj\Debug\RandomNumber.csprojAssemblyReference.cache
+G:\Adrian Y10\RandomNumber\RandomNumber\obj\Debug\RandomNumber.Form1.resources
+G:\Adrian Y10\RandomNumber\RandomNumber\obj\Debug\RandomNumber.Properties.Resources.resources
+G:\Adrian Y10\RandomNumber\RandomNumber\obj\Debug\RandomNumber.csproj.GenerateResource.cache
+G:\Adrian Y10\RandomNumber\RandomNumber\obj\Debug\RandomNumber.csproj.CoreCompileInputs.cache
+G:\Adrian Y10\RandomNumber\RandomNumber\bin\Debug\RandomNumber.exe.config
+G:\Adrian Y10\RandomNumber\RandomNumber\bin\Debug\RandomNumber.exe
+G:\Adrian Y10\RandomNumber\RandomNumber\bin\Debug\RandomNumber.pdb
+G:\Adrian Y10\RandomNumber\RandomNumber\obj\Debug\RandomNumber.exe
+G:\Adrian Y10\RandomNumber\RandomNumber\obj\Debug\RandomNumber.pdb
