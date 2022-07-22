@@ -25,7 +25,7 @@ namespace Teacher_Toolkit
         int currentTheme = 10;
 
         List<string> OtherPannelColour = new List<string>() { "FFCB70", "F7B064", "BBBBBB", "CCCCCC", "DDDDDD" };
-        List<string> pannelColour = new List<string>() { "3B2F4C", "31909B", "BBBBBB", "CCCCCC", "DDDDDD" }; 
+        List<string> pannelColour = new List<string>() { "3B2F4C", "31909B", "BBBBBB", "CCCCCC", "DDDDDD" };
         List<string> backgroundColour = new List<string>() { "3B2F4C", "31909B", "BBBBBB", "CCCCCC", "DDDDDD" };
         List<string> buttonBackground = new List<string>() { "4F3E65", "3BADBA", "BBBBBB", "CCCCCC", "DDDDDD" };
         List<string> fontColour = new List<string>() { "FFCB70", "F7B064", "BBBBBB", "CCCCCC", "DDDDDD" };
@@ -747,14 +747,14 @@ namespace Teacher_Toolkit
             ColumnBuffer = 0;
             RowBuffer = 0;
 
-            
+
 
             Label tempLabel = new Label();
             tempLabel.AutoSize = true;
             tempLabel.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tempLabel.ForeColor = System.Drawing.Color.White;
             tempLabel.BackColor = Color.White;
-            tempLabel.Location = new System.Drawing.Point(100,100);
+            tempLabel.Location = new System.Drawing.Point(100, 100);
             tempLabel.Name = "A";
             tempLabel.Size = new System.Drawing.Size(100, 100);
             tempLabel.TabIndex = 10;
@@ -808,7 +808,7 @@ namespace Teacher_Toolkit
         public Point current = new Point();
         public Point old = new Point();
         public Pen p = new Pen(Color.Black, 5);
-        public Pen HoverPen = new Pen(Color.FromArgb(1,1,1), 5);
+        public Pen HoverPen = new Pen(Color.FromArgb(1, 1, 1), 5);
         public Graphics g;
         private void WhiteBoardPanel_MouseMove(object sender, MouseEventArgs e)
         {
@@ -890,7 +890,7 @@ namespace Teacher_Toolkit
 
         private void RubberButton_Click(object sender, EventArgs e)
         {
-            Rubber = Color.FromArgb(255,255,255);
+            Rubber = Color.FromArgb(255, 255, 255);
             p.Color = Rubber;
         }
 
@@ -971,9 +971,9 @@ namespace Teacher_Toolkit
             {
                 changeControlCols(cont);
             }
-            
+
             this.BackColor = Color.FromArgb(Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(0, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(2, 2), 16), Convert.ToInt32(TeacherToolkit.currentColourScheme[3].Substring(4, 2), 16));
-            foreach(var panel in this.Controls.OfType<Panel>()) //No idea what this was meant to do, add it back in if it had some functionality I missed -Ja
+            foreach (var panel in this.Controls.OfType<Panel>()) //No idea what this was meant to do, add it back in if it had some functionality I missed -Ja
             {
                 foreach (Control cont in panel.Controls)
                 {
@@ -1007,7 +1007,7 @@ namespace Teacher_Toolkit
 
         private void CheckPop_Tick(object sender, EventArgs e)
         {
-            if(TimersPanelShow == true)
+            if (TimersPanelShow == true)
             {
                 try
                 {
@@ -1068,13 +1068,13 @@ namespace Teacher_Toolkit
         {
             if (TeacherToolkit.theme == 0)
             {
-                if(currentTheme != TeacherToolkit.theme)
+                if (currentTheme != TeacherToolkit.theme)
                 {
                     currentTheme = TeacherToolkit.theme;
                     Console.WriteLine("Theme 1 selected");
                     changeColours();
                 }
-                
+
             }
             if (TeacherToolkit.theme == 1)
             {
@@ -1084,7 +1084,7 @@ namespace Teacher_Toolkit
                     Console.WriteLine("Theme 2 selected");
                     changeColours();
                 }
-                
+
             }
             if (TeacherToolkit.theme == 2)
             {
@@ -1094,7 +1094,7 @@ namespace Teacher_Toolkit
                     Console.WriteLine("Theme 3 selected");
                     changeColours();
                 }
-                
+
             }
             if (TeacherToolkit.theme == 3)
             {
@@ -1104,7 +1104,7 @@ namespace Teacher_Toolkit
                     Console.WriteLine("Theme 4 selected");
                     changeColours();
                 }
-                
+
             }
             if (TeacherToolkit.theme == 4)
             {
