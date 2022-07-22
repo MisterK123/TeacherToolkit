@@ -1,0 +1,10 @@
+G:\Adrian Y10\timerFormMain-master\timerFormMain\bin\Debug\timerFormMain.exe.config
+G:\Adrian Y10\timerFormMain-master\timerFormMain\bin\Debug\timerFormMain.exe
+G:\Adrian Y10\timerFormMain-master\timerFormMain\bin\Debug\timerFormMain.pdb
+G:\Adrian Y10\timerFormMain-master\timerFormMain\obj\Debug\timerFormMain.csprojAssemblyReference.cache
+G:\Adrian Y10\timerFormMain-master\timerFormMain\obj\Debug\timerFormMain.Form1.resources
+G:\Adrian Y10\timerFormMain-master\timerFormMain\obj\Debug\timerFormMain.Properties.Resources.resources
+G:\Adrian Y10\timerFormMain-master\timerFormMain\obj\Debug\timerFormMain.csproj.GenerateResource.cache
+G:\Adrian Y10\timerFormMain-master\timerFormMain\obj\Debug\timerFormMain.csproj.CoreCompileInputs.cache
+G:\Adrian Y10\timerFormMain-master\timerFormMain\obj\Debug\timerFormMain.exe
+G:\Adrian Y10\timerFormMain-master\timerFormMain\obj\Debug\timerFormMain.pdb
