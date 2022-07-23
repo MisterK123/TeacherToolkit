@@ -1025,6 +1025,13 @@ namespace Teacher_Toolkit
                 {
                     changeControlCols(cont);
                 }
+                foreach (var panel in timers.Controls.OfType<Panel>())
+                {
+                    foreach(Control cont in panel.Controls)
+                    {
+                        changeControlCols(cont);
+                    } 
+                }
             }
             if(rsgShown == true)
             {
@@ -1032,12 +1039,27 @@ namespace Teacher_Toolkit
                 {
                     changeControlCols(cont);
                 }
+                foreach (var panel in rsg.Controls.OfType<Panel>())
+                {
+                    foreach (Control cont in panel.Controls)
+                    {
+                        changeControlCols(cont);
+                    }
+                }
+                
             }
             if(rngShown == true)
             {
                 foreach (Control cont in rng.Controls)
                 {
                     changeControlCols(cont);
+                }
+                foreach (var panel in rng.Controls.OfType<Panel>())
+                {
+                    foreach (Control cont in panel.Controls)
+                    {
+                        changeControlCols(cont);
+                    }
                 }
             }
             
