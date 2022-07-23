@@ -893,7 +893,7 @@ namespace Teacher_Toolkit
                 Navigation.Hide();
                 this.WindowState = FormWindowState.Maximized;
                 WhiteBoardContainerPanel.Location = new Point(0, 10);
-                WhiteboardPropertiesPanel.Location = new Point(1815, 10);
+                //WhiteboardPropertiesPanel.Location = new Point(1815, 10);
                 WhiteBoardContainerPanel.Size = new Size(2000, 1300);
                 WhiteBoardPanel.Size = new Size(1800, 1300);
                 //LightDarkModeToggleButton.Hide();
@@ -908,7 +908,7 @@ namespace Teacher_Toolkit
                 Navigation.Show();
                 this.WindowState = FormWindowState.Normal;
                 WhiteBoardContainerPanel.Location = new Point(185, 22);
-                WhiteboardPropertiesPanel.Location = new Point(660, 9);
+                //WhiteboardPropertiesPanel.Location = new Point(660, 9);
                 WhiteBoardContainerPanel.Size = new Size(766, 552);
                 WhiteBoardPanel.Size = new Size(645, 534);
                 //LightDarkModeToggleButton.Show();

@@ -132,10 +132,8 @@ namespace Teacher_Toolkit
             this.WhiteBoardPanel = new System.Windows.Forms.Panel();
             this.RewardedStudentsFolderDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.ChangeColorButton = new System.Windows.Forms.Button();
-            this.ResetWhiteboardButton = new System.Windows.Forms.Button();
             this.PenSizeTrackBar = new System.Windows.Forms.TrackBar();
             this.WhiteBoardContainerPanel = new System.Windows.Forms.Panel();
-            this.WhiteboardPropertiesPanel = new System.Windows.Forms.Panel();
             this.RubberButton = new System.Windows.Forms.Button();
             this.PenSizeLabel = new System.Windows.Forms.Label();
             this.MaximiseWhiteboardButton = new System.Windows.Forms.Button();
@@ -163,6 +161,7 @@ namespace Teacher_Toolkit
             this.colourChangeTImer = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.TimersTimer = new System.Windows.Forms.Timer(this.components);
+            this.ResetWhiteboardButton = new System.Windows.Forms.Button();
             this.Navigation.SuspendLayout();
             this.ClockPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
@@ -178,7 +177,6 @@ namespace Teacher_Toolkit
             ((System.ComponentModel.ISupportInitialize)(this.TextFileHelpPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PenSizeTrackBar)).BeginInit();
             this.WhiteBoardContainerPanel.SuspendLayout();
-            this.WhiteboardPropertiesPanel.SuspendLayout();
             this.ExamTimerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AnologueClock)).BeginInit();
             this.SuspendLayout();
@@ -581,6 +579,7 @@ namespace Teacher_Toolkit
             // 
             // RewardPointsPanel
             // 
+            this.RewardPointsPanel.Controls.Add(this.SeatingPlanGeneratorPanel);
             this.RewardPointsPanel.Controls.Add(this.ExportStudentButton);
             this.RewardPointsPanel.Controls.Add(this.RewardPointsHelpButton);
             this.RewardPointsPanel.Controls.Add(this.SelectStudentWarning);
@@ -590,7 +589,7 @@ namespace Teacher_Toolkit
             this.RewardPointsPanel.Controls.Add(this.GiveRewardPointButton);
             this.RewardPointsPanel.Controls.Add(this.StudentsList);
             this.RewardPointsPanel.Controls.Add(this.RewardPointsTitle);
-            this.RewardPointsPanel.Location = new System.Drawing.Point(1192, 342);
+            this.RewardPointsPanel.Location = new System.Drawing.Point(1271, 451);
             this.RewardPointsPanel.Name = "RewardPointsPanel";
             this.RewardPointsPanel.Size = new System.Drawing.Size(763, 552);
             this.RewardPointsPanel.TabIndex = 28;
@@ -1224,15 +1223,15 @@ namespace Teacher_Toolkit
             // 
             this.SeatingPlanGeneratorPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.SeatingPlanGeneratorPanel.Controls.Add(this.StudentTextBox);
+            this.SeatingPlanGeneratorPanel.Controls.Add(this.ExamTimerPanel);
             this.SeatingPlanGeneratorPanel.Controls.Add(this.GenerateSeatingPlanButton);
-            this.SeatingPlanGeneratorPanel.Controls.Add(this.WhiteBoardContainerPanel);
             this.SeatingPlanGeneratorPanel.Controls.Add(this.RowsTitle);
             this.SeatingPlanGeneratorPanel.Controls.Add(this.RowsInputBox);
             this.SeatingPlanGeneratorPanel.Controls.Add(this.ColumnsTitle);
             this.SeatingPlanGeneratorPanel.Controls.Add(this.ColumnsInputBox);
             this.SeatingPlanGeneratorPanel.Controls.Add(this.SeatingPlan);
             this.SeatingPlanGeneratorPanel.Controls.Add(this.PaintTitle);
-            this.SeatingPlanGeneratorPanel.Location = new System.Drawing.Point(1052, 429);
+            this.SeatingPlanGeneratorPanel.Location = new System.Drawing.Point(33, 255);
             this.SeatingPlanGeneratorPanel.Name = "SeatingPlanGeneratorPanel";
             this.SeatingPlanGeneratorPanel.Size = new System.Drawing.Size(763, 552);
             this.SeatingPlanGeneratorPanel.TabIndex = 39;
@@ -1547,7 +1546,7 @@ namespace Teacher_Toolkit
             this.ChangeColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChangeColorButton.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChangeColorButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ChangeColorButton.Location = new System.Drawing.Point(0, 80);
+            this.ChangeColorButton.Location = new System.Drawing.Point(657, 97);
             this.ChangeColorButton.Name = "ChangeColorButton";
             this.ChangeColorButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ChangeColorButton.Size = new System.Drawing.Size(95, 46);
@@ -1556,27 +1555,9 @@ namespace Teacher_Toolkit
             this.ChangeColorButton.UseVisualStyleBackColor = false;
             this.ChangeColorButton.Click += new System.EventHandler(this.ChangeColorButton_Click);
             // 
-            // ResetWhiteboardButton
-            // 
-            this.ResetWhiteboardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.ResetWhiteboardButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ResetWhiteboardButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ResetWhiteboardButton.FlatAppearance.BorderSize = 0;
-            this.ResetWhiteboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetWhiteboardButton.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetWhiteboardButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ResetWhiteboardButton.Location = new System.Drawing.Point(0, 488);
-            this.ResetWhiteboardButton.Name = "ResetWhiteboardButton";
-            this.ResetWhiteboardButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ResetWhiteboardButton.Size = new System.Drawing.Size(95, 46);
-            this.ResetWhiteboardButton.TabIndex = 51;
-            this.ResetWhiteboardButton.Text = "Clear";
-            this.ResetWhiteboardButton.UseVisualStyleBackColor = false;
-            this.ResetWhiteboardButton.Click += new System.EventHandler(this.ResetWhiteboardButton_Click);
-            // 
             // PenSizeTrackBar
             // 
-            this.PenSizeTrackBar.Location = new System.Drawing.Point(0, 194);
+            this.PenSizeTrackBar.Location = new System.Drawing.Point(657, 201);
             this.PenSizeTrackBar.Maximum = 7;
             this.PenSizeTrackBar.Minimum = 1;
             this.PenSizeTrackBar.Name = "PenSizeTrackBar";
@@ -1587,26 +1568,17 @@ namespace Teacher_Toolkit
             // WhiteBoardContainerPanel
             // 
             this.WhiteBoardContainerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.WhiteBoardContainerPanel.Controls.Add(this.WhiteboardPropertiesPanel);
+            this.WhiteBoardContainerPanel.Controls.Add(this.ResetWhiteboardButton);
             this.WhiteBoardContainerPanel.Controls.Add(this.WhiteBoardPanel);
-            this.WhiteBoardContainerPanel.Location = new System.Drawing.Point(150, 80);
+            this.WhiteBoardContainerPanel.Controls.Add(this.PenSizeLabel);
+            this.WhiteBoardContainerPanel.Controls.Add(this.MaximiseWhiteboardButton);
+            this.WhiteBoardContainerPanel.Controls.Add(this.RubberButton);
+            this.WhiteBoardContainerPanel.Controls.Add(this.PenSizeTrackBar);
+            this.WhiteBoardContainerPanel.Controls.Add(this.ChangeColorButton);
+            this.WhiteBoardContainerPanel.Location = new System.Drawing.Point(1151, 468);
             this.WhiteBoardContainerPanel.Name = "WhiteBoardContainerPanel";
             this.WhiteBoardContainerPanel.Size = new System.Drawing.Size(766, 552);
             this.WhiteBoardContainerPanel.TabIndex = 43;
-            // 
-            // WhiteboardPropertiesPanel
-            // 
-            this.WhiteboardPropertiesPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.WhiteboardPropertiesPanel.Controls.Add(this.RubberButton);
-            this.WhiteboardPropertiesPanel.Controls.Add(this.PenSizeLabel);
-            this.WhiteboardPropertiesPanel.Controls.Add(this.MaximiseWhiteboardButton);
-            this.WhiteboardPropertiesPanel.Controls.Add(this.ResetWhiteboardButton);
-            this.WhiteboardPropertiesPanel.Controls.Add(this.PenSizeTrackBar);
-            this.WhiteboardPropertiesPanel.Controls.Add(this.ChangeColorButton);
-            this.WhiteboardPropertiesPanel.Location = new System.Drawing.Point(660, 9);
-            this.WhiteboardPropertiesPanel.Name = "WhiteboardPropertiesPanel";
-            this.WhiteboardPropertiesPanel.Size = new System.Drawing.Size(95, 534);
-            this.WhiteboardPropertiesPanel.TabIndex = 54;
             // 
             // RubberButton
             // 
@@ -1616,7 +1588,7 @@ namespace Teacher_Toolkit
             this.RubberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RubberButton.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RubberButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.RubberButton.Location = new System.Drawing.Point(0, 132);
+            this.RubberButton.Location = new System.Drawing.Point(657, 149);
             this.RubberButton.Name = "RubberButton";
             this.RubberButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.RubberButton.Size = new System.Drawing.Size(95, 46);
@@ -1630,7 +1602,7 @@ namespace Teacher_Toolkit
             this.PenSizeLabel.AutoSize = true;
             this.PenSizeLabel.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PenSizeLabel.ForeColor = System.Drawing.Color.White;
-            this.PenSizeLabel.Location = new System.Drawing.Point(16, 230);
+            this.PenSizeLabel.Location = new System.Drawing.Point(672, 249);
             this.PenSizeLabel.Name = "PenSizeLabel";
             this.PenSizeLabel.Size = new System.Drawing.Size(63, 21);
             this.PenSizeLabel.TabIndex = 4;
@@ -1639,13 +1611,12 @@ namespace Teacher_Toolkit
             // MaximiseWhiteboardButton
             // 
             this.MaximiseWhiteboardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.MaximiseWhiteboardButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.MaximiseWhiteboardButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.MaximiseWhiteboardButton.FlatAppearance.BorderSize = 0;
             this.MaximiseWhiteboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MaximiseWhiteboardButton.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximiseWhiteboardButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MaximiseWhiteboardButton.Location = new System.Drawing.Point(0, 0);
+            this.MaximiseWhiteboardButton.Location = new System.Drawing.Point(657, 16);
             this.MaximiseWhiteboardButton.Name = "MaximiseWhiteboardButton";
             this.MaximiseWhiteboardButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.MaximiseWhiteboardButton.Size = new System.Drawing.Size(95, 61);
@@ -1675,7 +1646,7 @@ namespace Teacher_Toolkit
             this.ExamTimerPanel.Controls.Add(this.AnologueClock);
             this.ExamTimerPanel.Controls.Add(this.StartTime);
             this.ExamTimerPanel.Controls.Add(this.ExamBoard);
-            this.ExamTimerPanel.Location = new System.Drawing.Point(1256, 285);
+            this.ExamTimerPanel.Location = new System.Drawing.Point(150, 99);
             this.ExamTimerPanel.Name = "ExamTimerPanel";
             this.ExamTimerPanel.Size = new System.Drawing.Size(763, 552);
             this.ExamTimerPanel.TabIndex = 44;
@@ -1925,14 +1896,31 @@ namespace Teacher_Toolkit
             // 
             this.TimersTimer.Tick += new System.EventHandler(this.TimersTimer_Tick);
             // 
+            // ResetWhiteboardButton
+            // 
+            this.ResetWhiteboardButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ResetWhiteboardButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.ResetWhiteboardButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ResetWhiteboardButton.FlatAppearance.BorderSize = 0;
+            this.ResetWhiteboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetWhiteboardButton.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetWhiteboardButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ResetWhiteboardButton.Location = new System.Drawing.Point(657, 493);
+            this.ResetWhiteboardButton.Name = "ResetWhiteboardButton";
+            this.ResetWhiteboardButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ResetWhiteboardButton.Size = new System.Drawing.Size(95, 46);
+            this.ResetWhiteboardButton.TabIndex = 51;
+            this.ResetWhiteboardButton.Text = "Clear";
+            this.ResetWhiteboardButton.UseVisualStyleBackColor = false;
+            this.ResetWhiteboardButton.Click += new System.EventHandler(this.ResetWhiteboardButton_Click);
+            // 
             // TeacherToolkit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(1486, 654);
-            this.Controls.Add(this.SeatingPlanGeneratorPanel);
-            this.Controls.Add(this.ExamTimerPanel);
+            this.Controls.Add(this.WhiteBoardContainerPanel);
             this.Controls.Add(this.RewardPointsPanel);
             this.Controls.Add(this.RandomNumberGeneratorPanel);
             this.Controls.Add(this.SettingsPanel);
@@ -1973,8 +1961,7 @@ namespace Teacher_Toolkit
             ((System.ComponentModel.ISupportInitialize)(this.TextFileHelpPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PenSizeTrackBar)).EndInit();
             this.WhiteBoardContainerPanel.ResumeLayout(false);
-            this.WhiteboardPropertiesPanel.ResumeLayout(false);
-            this.WhiteboardPropertiesPanel.PerformLayout();
+            this.WhiteBoardContainerPanel.PerformLayout();
             this.ExamTimerPanel.ResumeLayout(false);
             this.ExamTimerPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AnologueClock)).EndInit();
@@ -2040,11 +2027,9 @@ namespace Teacher_Toolkit
         private System.Windows.Forms.Button ExportStudentButton;
         private System.Windows.Forms.FolderBrowserDialog RewardedStudentsFolderDialog;
         private System.Windows.Forms.Button ChangeColorButton;
-        private System.Windows.Forms.Button ResetWhiteboardButton;
         private System.Windows.Forms.TrackBar PenSizeTrackBar;
         private System.Windows.Forms.Panel WhiteBoardContainerPanel;
         private System.Windows.Forms.Button MaximiseWhiteboardButton;
-        private System.Windows.Forms.Panel WhiteboardPropertiesPanel;
         private System.Windows.Forms.Label PenSizeLabel;
         private System.Windows.Forms.Button RubberButton;
         private System.Windows.Forms.Button ExamTimerButton;
@@ -2116,6 +2101,7 @@ namespace Teacher_Toolkit
         private System.Windows.Forms.Button addStudentButton;
         private System.Windows.Forms.Button loadClassButton;
         private System.Windows.Forms.Button popOutRandomStudent;
+        private System.Windows.Forms.Button ResetWhiteboardButton;
     }
 }
 
