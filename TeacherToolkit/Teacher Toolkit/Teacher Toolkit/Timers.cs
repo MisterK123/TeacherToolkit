@@ -156,10 +156,10 @@ namespace Teacher_Toolkit
 
         private void drawCircle(PaintEventArgs e)
         {
-            Pen arcPen = new Pen(Color.FromArgb(255, 203, 112));
+            Pen arcPen = new Pen(Color.FromArgb(TeacherToolkit.penR, TeacherToolkit.penG, TeacherToolkit.penB), 5);
             if (countdown == 0) e.Graphics.DrawArc(arcPen, new Rectangle(25, 25, 250, 250), 0, 360);
             Console.WriteLine(360 * ((float)countdown / (float)original));
-            e.Graphics.DrawArc(new Pen(Color.FromArgb(255, 203, 112), 5), new Rectangle(25, 25, 250, 250), -90, 360 * ((float)countdown / (float)original));// Console.WriteLine(360 * (countdown / original)); }
+            e.Graphics.DrawArc(arcPen, new Rectangle(25, 25, 250, 250), -90, 360 * ((float)countdown / (float)original));// Console.WriteLine(360 * (countdown / original)); }
         }
 
         private void switchMode_Click(object sender, EventArgs e)

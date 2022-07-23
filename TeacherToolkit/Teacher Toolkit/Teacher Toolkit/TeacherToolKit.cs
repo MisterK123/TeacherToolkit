@@ -17,8 +17,10 @@ namespace Teacher_Toolkit
     public partial class TeacherToolkit : Form
     {
         Random rnd = new Random();
-        static public string penCol;
-        Pen arcPen = new Pen(Color.FromArgb(255, 203, 112), 5);
+        static public int penR;
+        static public int penG;
+        static public int penB;
+        Pen arcPen = new Pen(Color.FromArgb(255, 213, 122), 5);
 
         static public List<string> currentColourScheme = new List<string>();
         static public int theme = 2;
@@ -988,6 +990,10 @@ namespace Teacher_Toolkit
             penBCol = Convert.ToInt32(currentColourScheme[4].Substring(4, 2), 16);
             
             arcPen.Color = Color.FromArgb(penRCol, penGCol, penBCol);
+            penR = penRCol;
+            penG = penGCol;
+            penB = penBCol;
+            
         }
         /*
         float Hour;
