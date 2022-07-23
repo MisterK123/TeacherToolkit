@@ -1231,7 +1231,7 @@ namespace Teacher_Toolkit
             this.SeatingPlanGeneratorPanel.Controls.Add(this.ColumnsInputBox);
             this.SeatingPlanGeneratorPanel.Controls.Add(this.SeatingPlan);
             this.SeatingPlanGeneratorPanel.Controls.Add(this.PaintTitle);
-            this.SeatingPlanGeneratorPanel.Location = new System.Drawing.Point(1164, 388);
+            this.SeatingPlanGeneratorPanel.Location = new System.Drawing.Point(1052, 429);
             this.SeatingPlanGeneratorPanel.Name = "SeatingPlanGeneratorPanel";
             this.SeatingPlanGeneratorPanel.Size = new System.Drawing.Size(763, 552);
             this.SeatingPlanGeneratorPanel.TabIndex = 39;

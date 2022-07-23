@@ -997,6 +997,9 @@ namespace Teacher_Toolkit
 
         }
         */
+        bool timersShown = false;
+        bool rsgShown = false;
+        bool rngShown = false;
         public void changeColours()
         {
             //Console.WriteLine("called");
@@ -1016,19 +1019,29 @@ namespace Teacher_Toolkit
                 }
 
             }
-            foreach (Control cont in timers.Controls)
+            if(timersShown == true)
             {
-                changeControlCols(cont);
+                foreach (Control cont in timers.Controls)
+                {
+                    changeControlCols(cont);
+                }
             }
-            foreach (Control cont in rsg.Controls)
+            if(rsgShown == true)
             {
-                changeControlCols(cont);
+                foreach (Control cont in rsg.Controls)
+                {
+                    changeControlCols(cont);
+                }
             }
-            foreach (Control cont in rng.Controls)
+            if(rngShown == true)
             {
-                changeControlCols(cont);
+                foreach (Control cont in rng.Controls)
+                {
+                    changeControlCols(cont);
+                }
             }
-            /**/
+            
+            
 
         }
 
@@ -1045,6 +1058,8 @@ namespace Teacher_Toolkit
             TimersPanel.Hide();
             timers = new Timers();
             timers.Show();
+            timersShown = true;
+            changeColours();
             TimersPanelShow = false;
         }
         private void RandomNumberGeneratorPopOutButton_Click(object sender, EventArgs e)
@@ -1052,6 +1067,8 @@ namespace Teacher_Toolkit
             RandomNumberGeneratorPanel.Hide();
             rng = new RandomNumberGenerator();
             rng.Show();
+            rngShown = true;
+            changeColours();
             RandomPanelShow = false;
         }
 
@@ -1061,6 +1078,8 @@ namespace Teacher_Toolkit
             RandomStudentPanel.Hide();
             rsg = new RandomStudentForm();
             rsg.Show();
+            rsgShown = true;
+            changeColours();
             RandomStudentPanelShow = false;
         }
 
@@ -1073,6 +1092,7 @@ namespace Teacher_Toolkit
                 {
                     timers.Hide();
                     TimersPanel.Show();
+                    timersShown = false;
                     //Console.WriteLine("Shown");
                 }
                 catch { }
@@ -1083,6 +1103,7 @@ namespace Teacher_Toolkit
                 {
                     rng.Hide();
                     RandomNumberGeneratorPanel.Show();
+                    rngShown = false;
                     PanelIndication(RandomNumberGeneratorButton, RandomNumberGeneratorPanel);
                 }
                 catch (Exception ex)
@@ -1095,6 +1116,7 @@ namespace Teacher_Toolkit
                 {
                     rsg.Hide();
                     RandomStudentPanel.Show();
+                    rsgShown = false;
                     PanelIndication(RandomStudentButton, RandomStudentPanel);
                 }
                 catch (Exception ex)
