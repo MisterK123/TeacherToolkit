@@ -1225,6 +1225,7 @@ namespace Teacher_Toolkit
             this.SeatingPlanGeneratorPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.SeatingPlanGeneratorPanel.Controls.Add(this.StudentTextBox);
             this.SeatingPlanGeneratorPanel.Controls.Add(this.GenerateSeatingPlanButton);
+            this.SeatingPlanGeneratorPanel.Controls.Add(this.WhiteBoardContainerPanel);
             this.SeatingPlanGeneratorPanel.Controls.Add(this.RowsTitle);
             this.SeatingPlanGeneratorPanel.Controls.Add(this.RowsInputBox);
             this.SeatingPlanGeneratorPanel.Controls.Add(this.ColumnsTitle);
@@ -1588,7 +1589,7 @@ namespace Teacher_Toolkit
             this.WhiteBoardContainerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.WhiteBoardContainerPanel.Controls.Add(this.WhiteboardPropertiesPanel);
             this.WhiteBoardContainerPanel.Controls.Add(this.WhiteBoardPanel);
-            this.WhiteBoardContainerPanel.Location = new System.Drawing.Point(1216, 313);
+            this.WhiteBoardContainerPanel.Location = new System.Drawing.Point(150, 80);
             this.WhiteBoardContainerPanel.Name = "WhiteBoardContainerPanel";
             this.WhiteBoardContainerPanel.Size = new System.Drawing.Size(766, 552);
             this.WhiteBoardContainerPanel.TabIndex = 43;
@@ -1932,7 +1933,6 @@ namespace Teacher_Toolkit
             this.ClientSize = new System.Drawing.Size(1486, 654);
             this.Controls.Add(this.SeatingPlanGeneratorPanel);
             this.Controls.Add(this.ExamTimerPanel);
-            this.Controls.Add(this.WhiteBoardContainerPanel);
             this.Controls.Add(this.RewardPointsPanel);
             this.Controls.Add(this.RandomNumberGeneratorPanel);
             this.Controls.Add(this.SettingsPanel);

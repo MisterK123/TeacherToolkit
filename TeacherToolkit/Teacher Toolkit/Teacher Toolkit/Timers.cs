@@ -16,7 +16,7 @@ namespace Teacher_Toolkit
         {
             InitializeComponent();
         }
-        int currentTheme = 10;
+        
         private void Timers_FormClosing(object sender, FormClosingEventArgs e)
         {
             TeacherToolkit.TimersPanelShow = true;
@@ -156,7 +156,8 @@ namespace Teacher_Toolkit
 
         private void drawCircle(PaintEventArgs e)
         {
-            if (countdown == 0) e.Graphics.DrawArc(new Pen(Color.FromArgb(255, 203, 112), 5), new Rectangle(25, 25, 250, 250), 0, 360);
+            Pen arcPen = new Pen(Color.FromArgb(255, 203, 112));
+            if (countdown == 0) e.Graphics.DrawArc(arcPen, new Rectangle(25, 25, 250, 250), 0, 360);
             Console.WriteLine(360 * ((float)countdown / (float)original));
             e.Graphics.DrawArc(new Pen(Color.FromArgb(255, 203, 112), 5), new Rectangle(25, 25, 250, 250), -90, 360 * ((float)countdown / (float)original));// Console.WriteLine(360 * (countdown / original)); }
         }
@@ -221,6 +222,9 @@ namespace Teacher_Toolkit
             mouseDown = false;
         }
 
-        
+        private void TimersPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.TimersPanel = new System.Windows.Forms.Panel();
+            this.minimizeButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.add10mins = new System.Windows.Forms.Button();
             this.add3mins = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
@@ -42,10 +44,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.timerBox = new System.Windows.Forms.TextBox();
             this.StartStop = new System.Windows.Forms.Button();
-            this.TimersTimer = new System.Windows.Forms.Timer(this.components);
-            this.minimizeButton = new System.Windows.Forms.Button();
-            this.closeButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TimersTimer = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.TimersPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,9 +72,36 @@
             this.TimersPanel.Name = "TimersPanel";
             this.TimersPanel.Size = new System.Drawing.Size(763, 552);
             this.TimersPanel.TabIndex = 15;
+            this.TimersPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TimersPanel_Paint);
             this.TimersPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.timerTB_MouseDown);
             this.TimersPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.timerTB_MouseMove);
             this.TimersPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.timerTB_MouseUp);
+            // 
+            // minimizeButton
+            // 
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.minimizeButton.Location = new System.Drawing.Point(695, 0);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(38, 31);
+            this.minimizeButton.TabIndex = 52;
+            this.minimizeButton.Text = "—";
+            this.minimizeButton.UseVisualStyleBackColor = true;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
+            // 
+            // closeButton
+            // 
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.closeButton.Location = new System.Drawing.Point(723, 0);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(38, 31);
+            this.closeButton.TabIndex = 51;
+            this.closeButton.Text = "✖";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // add10mins
             // 
@@ -248,36 +275,6 @@
             this.StartStop.UseVisualStyleBackColor = false;
             this.StartStop.Click += new System.EventHandler(this.StartStop_Click);
             // 
-            // TimersTimer
-            // 
-            this.TimersTimer.Tick += new System.EventHandler(this.TimersTimer_Tick);
-            // 
-            // minimizeButton
-            // 
-            this.minimizeButton.FlatAppearance.BorderSize = 0;
-            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.minimizeButton.Location = new System.Drawing.Point(695, 0);
-            this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(38, 31);
-            this.minimizeButton.TabIndex = 52;
-            this.minimizeButton.Text = "—";
-            this.minimizeButton.UseVisualStyleBackColor = true;
-            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
-            // 
-            // closeButton
-            // 
-            this.closeButton.FlatAppearance.BorderSize = 0;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.closeButton.Location = new System.Drawing.Point(723, 0);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(38, 31);
-            this.closeButton.TabIndex = 51;
-            this.closeButton.Text = "✖";
-            this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(44, 102);
@@ -287,9 +284,9 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
-            // timer1
+            // TimersTimer
             // 
-            //this.timer1.Tick += new System.EventHandler(this.ColourTimer);
+            this.TimersTimer.Tick += new System.EventHandler(this.TimersTimer_Tick);
             // 
             // Timers
             // 

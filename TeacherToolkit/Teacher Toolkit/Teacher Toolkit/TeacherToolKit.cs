@@ -17,8 +17,8 @@ namespace Teacher_Toolkit
     public partial class TeacherToolkit : Form
     {
         Random rnd = new Random();
-
-
+        static public string penCol;
+        Pen arcPen = new Pen(Color.FromArgb(255, 203, 112), 5);
 
         static public List<string> currentColourScheme = new List<string>();
         static public int theme = 2;
@@ -557,9 +557,9 @@ namespace Teacher_Toolkit
 
         private void drawCircle(PaintEventArgs e)
         {
-            if (countdown == 0) e.Graphics.DrawArc(new Pen(Color.FromArgb(255, 203, 112), 5), new Rectangle(25, 25, 250, 250), 0, 360);
-            //Console.WriteLine(360 * ((float)countdown / (float)original));
-            e.Graphics.DrawArc(new Pen(Color.FromArgb(255, 203, 112), 5), new Rectangle(25, 25, 250, 250), -90, 360 * ((float)countdown / (float)original));// //Console.WriteLine(360 * (countdown / original)); }
+            
+            if (countdown == 0) e.Graphics.DrawArc(arcPen, new Rectangle(25, 25, 250, 250), 0, 360);
+            e.Graphics.DrawArc(arcPen, new Rectangle(25, 25, 250, 250), -90, 360 * ((float)countdown / (float)original));
         }
 
         private void switchMode_Click(object sender, EventArgs e)
@@ -977,6 +977,17 @@ namespace Teacher_Toolkit
                 bCol = Convert.ToInt32(currentColourScheme[schemeInd].Substring(4, 2), 16);
                 cont.BackColor = Color.FromArgb(rCol, gCol, bCol);
             }
+
+
+            //pen colour change
+            int penRCol;
+            int penGCol;
+            int penBCol;
+            penRCol = Convert.ToInt32(currentColourScheme[4].Substring(0, 2), 16);
+            penGCol = Convert.ToInt32(currentColourScheme[4].Substring(2, 2), 16);
+            penBCol = Convert.ToInt32(currentColourScheme[4].Substring(4, 2), 16);
+            
+            arcPen.Color = Color.FromArgb(penRCol, penGCol, penBCol);
         }
         /*
         float Hour;
