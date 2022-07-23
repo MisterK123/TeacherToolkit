@@ -1031,8 +1031,6 @@ namespace Teacher_Toolkit
                 foreach (Control cont in panel.Controls)
                 {
                     changeControlCols(cont);
-
-
                 }
 
             }
@@ -1063,7 +1061,11 @@ namespace Teacher_Toolkit
                         changeControlCols(cont);
                     }
                 }
-                
+                rCol = Convert.ToInt32(currentColourScheme[3].Substring(0, 2), 16);
+                gCol = Convert.ToInt32(currentColourScheme[3].Substring(2, 2), 16);
+                bCol = Convert.ToInt32(currentColourScheme[3].Substring(4, 2), 16);
+                rsg.BackColor = Color.FromArgb(rCol, gCol, bCol);
+
             }
             if(rngShown == true)
             {
